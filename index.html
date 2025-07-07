@@ -56,12 +56,6 @@
 
 <body>
 	<marquee behavior="" direction="left">This site is test mode right now</marquee>
-	<div class="container">
-		{% if success %}
-		<div id="success-message" style="color: #e10600; font-weight: bold;">
-			Your message is sent. Thanks!
-		</div>
-		{% endif %}
 	</div>
 	<div class="bg-top navbar-light">
 		<div class="container">
@@ -193,21 +187,46 @@
 				<div class="col-md-12">
 					<div class="carousel-testimony owl-carousel">
 						<div class="staff">
-							{% for teacher in teachers %}
-
 							<div class="img-wrap d-flex align-items-stretch">
 								<div class="img align-self-stretch"
-									style="background-image: url({{ teacher.photo.url }});">
+									style="background-image: url('sharks/images/sanjar.jpg');">
 								</div>
 							</div>
 							<div class="text pt-3 text-center">
-								<h3>{{ teacher.name }}</h3>
+								<h3>Sanjar</h3>
 								<span class="position mb-2">Teacher</span>
 								<div class="faded">
-									<p>{{ teacher.description }}</p>
+									<p>lorem y. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown pri</p>
 								</div>
 							</div>
-							{% endfor %}
+						</div>
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch"
+									style="background-image: url('sharks/images/sanjar.jpg');">
+								</div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Sanjar</h3>
+								<span class="position mb-2">Teacher</span>
+								<div class="faded">
+									<p>lorem y. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown pri</p>
+								</div>
+							</div>
+						</div>
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch"
+									style="background-image: url('sharks/images/sanjar.jpg');">
+								</div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3>Sanjar</h3>
+								<span class="position mb-2">Teacher</span>
+								<div class="faded">
+									<p>lorem y. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown pri</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -294,19 +313,17 @@
 			<div class="row ftco-animate justify-content-center">
 				<div class="col-md-12">
 					<div class="carousel-testimony owl-carousel">
-						{% for result in results %}
 						<div class="item">
 							<div class=" ftco-animate">
-								<a href="{{ result.image.url }}"
+								<a href="sharks/images/ielts.jpg"
 									class="gallery image-popup img d-flex align-items-center"
-									style="background-image: url({{ result.image.url }});">
+									style="background-image: url('sharks/images/ielts.jpg');">
 									<div class="icon mb-4 d-flex align-items-center justify-content-center">
 										<span class="icon-file"></span>
 									</div>
 								</a>
 							</div>
 						</div>
-						{% endfor %}
 					</div>
 				</div>
 			</div>
@@ -409,7 +426,6 @@
 			<div class="row d-flex align-items-stretch no-gutters">
 				<div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
 					<form method="POST">
-						{% csrf_token %}
 						<div class="form-group">
 							<input type="text" name="name" class="form-control" placeholder="Your Name" required>
 						</div>
